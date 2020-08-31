@@ -39,7 +39,6 @@ rustc_version = {version = "0.2", optional = true }
 github = { repository = "JelteF/derive_more", workflow = "CI" }
 
 [features]
-nightly = []
 add_assign = []
 add = []
 as_mut = []
@@ -59,6 +58,7 @@ iterator = []
 mul_assign = []
 mul = []
 not = []
+step = []
 sum = []
 try_into = []
 generate-parsing-rs = ["peg"]
@@ -86,6 +86,9 @@ default = [
     "not",
     "sum",
     "try_into",
+]
+nightly = [
+	"step",
 ]
 
 [[test]]

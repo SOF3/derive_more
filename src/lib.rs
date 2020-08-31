@@ -112,6 +112,7 @@
 //!    `BitOrAssign` and `BitXorAssign`
 //! 9. [`MulAssign`-like], contains `MulAssign`, `DivAssign`, `RemAssign`,
 //!    `ShrAssign` and `ShlAssign`
+//! 10. [`Step`]
 //!
 //! ### Static methods
 //!
@@ -177,6 +178,7 @@
 //! [`DerefMut`]: https://jeltef.github.io/derive_more/derive_more/deref_mut.html
 //! [`AddAssign`-like]: https://jeltef.github.io/derive_more/derive_more/add_assign.html
 //! [`MulAssign`-like]: https://jeltef.github.io/derive_more/derive_more/mul_assign.html
+//! [`Step`]: https://jeltef.github.io/derive_more/derive_more/step.html
 //!
 //! [`Constructor`]: https://jeltef.github.io/derive_more/derive_more/constructor.html
 
@@ -354,6 +356,14 @@ create_derive!(
     ShlAssign,
     shl_assign_derive,
     shl_assign,
+);
+
+create_derive!(
+    "step",
+    step,
+    Step,
+    step_derive,
+    step,
 );
 
 create_derive!("sum", sum_like, Sum, sum_derive);
